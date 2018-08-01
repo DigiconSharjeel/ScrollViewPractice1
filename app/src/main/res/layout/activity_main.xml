@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#66ffff"
+    android:background="#e9eeff"
     tools:context=".MainActivity">
 
 
@@ -13,122 +13,194 @@
     android:layout_height="wrap_content">
     <SearchView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        >
     </SearchView>
 </LinearLayout>
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="true">
 
-
-
-
-
-
-
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
 
-            <LinearLayout
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:background="@drawable/slide2"
+                />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginVertical="15sp">
+
+                    <Button
+                        android:layout_width="200sp"
+                        android:layout_height="200sp"
+                        android:background="@drawable/apple" />
+
+                    <Button
+                        android:layout_width="200sp"
+                        android:layout_height="200sp"
+                        android:background="@drawable/banana" />
+
+                    <Button
+                        android:layout_width="200sp"
+                        android:layout_height="200sp"
+                        android:background="@drawable/apple" />
+
+                    <Button
+                        android:layout_width="200sp"
+                        android:layout_height="200sp"
+                        android:background="@drawable/grapes" />
+
+                    <Button
+                        android:layout_width="200sp"
+                        android:layout_height="200sp"
+                        android:background="@drawable/kiwi" />
+
+                    <Button
+                        android:layout_width="200sp"
+                        android:layout_height="200sp"
+                        android:background="@drawable/watermelon" />
+
+                    <Button
+                        android:layout_width="200sp"
+                        android:layout_height="200sp"
+                        android:background="@drawable/mango" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#b3ffe600"
+                android:text="On Sale Products"
+                android:layout_marginVertical="10sp"
+                android:textSize="30sp"
+                android:textStyle="" />
+
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_weight="2"
+                >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="200sp"
+                android:id="@+id/buttonFruits"
+                android:text="Fruits   N'  "
+                android:layout_alignParentStart="true"
+                android:background="#7111cc00"
+                android:textSize="20sp"/>
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="300sp"
-                    android:background="@drawable/apple"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="200sp"
+                    android:id="@+id/buttonVegetables"
+                android:layout_alignParentEnd="true"
+                    android:background="#7111cc00"
+                  android:text="Vegetables"
+                    android:textSize="20sp"/>
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="300sp"
-                    android:background="@drawable/apple"/>
 
-                <HorizontalScrollView
+            </RelativeLayout>
+
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginVertical="15sp">
+
+                    <Button
+                        android:layout_width="200sp"
+                        android:layout_height="200sp"
+                        android:background="@drawable/apple" />
+
+                    <Button
+                        android:layout_width="200sp"
+                        android:layout_height="200sp"
+                        android:background="@drawable/watermelon" />
+
+                    <Button
+                        android:layout_width="200sp"
+                        android:layout_height="200sp"
+                        android:background="@drawable/banana" />
+
+                    <Button
+                        android:layout_width="200sp"
+                        android:layout_height="200sp"
+                        android:background="@drawable/apple" />
+
+                    <Button
+                        android:layout_width="200sp"
+                        android:layout_height="200sp"
+                        android:background="@drawable/grapes" />
+
+                    <Button
+                        android:layout_width="200sp"
+                        android:layout_height="200sp"
+                        android:background="@drawable/kiwi" />
+
+                    <Button
+                        android:layout_width="200sp"
+                        android:layout_height="200sp"
+                        android:background="@drawable/watermelon" />
+
+                    <Button
+                        android:layout_width="200sp"
+                        android:layout_height="200sp"
+                        android:background="@drawable/mango" />
+
+                    <Button
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <Button
-                            android:layout_width="200sp"
-                            android:layout_height="200sp"
-                            android:background="@drawable/apple"/>
-                        <Button
-                            android:layout_width="200sp"
-                            android:layout_height="200sp"
-                            android:background="@drawable/watermelon"
-                            />
-                        <Button
-                            android:layout_width="200sp"
-                            android:layout_height="200sp"
-                            android:background="@drawable/kiwi"/>
+                        android:layout_height="200sp"
+                        android:background="@drawable/kiwi" />
 
-                        <Button
-                            android:layout_width="200sp"
-                            android:layout_height="200sp"
-                            android:background="@drawable/banana"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="200sp"
+                        android:background="@drawable/watermelon" />
 
-                        <Button
-                            android:layout_width="200sp"
-                            android:layout_height="200sp"
-                            android:background="@drawable/apple"/>
+                </LinearLayout>
 
-                        <Button
-                            android:layout_width="200sp"
-                            android:layout_height="200sp"
-                            android:background="@drawable/grapes"/>
+            </HorizontalScrollView>
 
-                        <Button
-                            android:layout_width="200sp"
-                            android:layout_height="200sp"
-                            android:background="@drawable/kiwi"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#b3ffe600"
+                android:text="Featured Products"
+                android:layout_marginVertical="10sp"
+                android:textSize="30sp"
+                android:textStyle="" />
 
-                        <Button
-                            android:layout_width="200sp"
-                            android:layout_height="200sp"
-                            android:background="@drawable/watermelon"/>
+        </LinearLayout>
 
-                        <Button
-                            android:layout_width="200sp"
-                            android:layout_height="200sp"
-                            android:background="@drawable/mango"/>
-
-
-
-
-                    </LinearLayout>
-
-                </HorizontalScrollView>
-
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="300sp"
-                    android:background="@drawable/grapes"/>
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="300sp"
-                    android:background="@drawable/kiwi"/>
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="300sp"
-                    android:background="@drawable/banana"/>
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="300sp"
-                    android:background="@drawable/mango"/>
-
-
-
-
-    </LinearLayout>
-
-        </ScrollView>
-
-
-
+    </ScrollView>
 
 
 
