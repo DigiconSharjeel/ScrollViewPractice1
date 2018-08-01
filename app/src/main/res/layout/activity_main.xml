@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#66ffff"
+    tools:context=".MainActivity">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </SearchView>
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="300sp"
+                    android:background="@drawable/apple"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="300sp"
+                    android:background="@drawable/apple"/>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <Button
+                            android:layout_width="200sp"
+                            android:layout_height="200sp"
+                            android:background="@drawable/apple"/>
+                        <Button
+                            android:layout_width="200sp"
+                            android:layout_height="200sp"
+                            android:background="@drawable/watermelon"
+                            />
+                        <Button
+                            android:layout_width="200sp"
+                            android:layout_height="200sp"
+                            android:background="@drawable/kiwi"/>
+
+                        <Button
+                            android:layout_width="200sp"
+                            android:layout_height="200sp"
+                            android:background="@drawable/banana"/>
+
+                        <Button
+                            android:layout_width="200sp"
+                            android:layout_height="200sp"
+                            android:background="@drawable/apple"/>
+
+                        <Button
+                            android:layout_width="200sp"
+                            android:layout_height="200sp"
+                            android:background="@drawable/grapes"/>
+
+                        <Button
+                            android:layout_width="200sp"
+                            android:layout_height="200sp"
+                            android:background="@drawable/kiwi"/>
+
+                        <Button
+                            android:layout_width="200sp"
+                            android:layout_height="200sp"
+                            android:background="@drawable/watermelon"/>
+
+                        <Button
+                            android:layout_width="200sp"
+                            android:layout_height="200sp"
+                            android:background="@drawable/mango"/>
+
+
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="300sp"
+                    android:background="@drawable/grapes"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="300sp"
+                    android:background="@drawable/kiwi"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="300sp"
+                    android:background="@drawable/banana"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="300sp"
+                    android:background="@drawable/mango"/>
+
+
+
+
+    </LinearLayout>
+
+        </ScrollView>
+
+
+
+
+
+
+</LinearLayout>
