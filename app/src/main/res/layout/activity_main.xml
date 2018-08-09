@@ -4,21 +4,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#deffe2"
+    android:background="#ffffff"
     tools:context=".MainActivity">
 
-
+//Search View
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:id="@+id/searchLayout"
+    android:onClick="searchButton">
+
     <SearchView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:background="#ffffff"
         >
     </SearchView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="22sp"
+        android:paddingTop="8sp"
+        android:text="Search here"
+        android:background="#ffffff"
+        android:layout_weight="1"/>
 </LinearLayout>
 
+
+//Vertial Scroll view
 
     <ScrollView
         android:layout_width="match_parent"
@@ -28,175 +41,801 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-            android:orientation="vertical">
-
-            <Button
+            <ViewFlipper
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
-                android:background="@drawable/slide2"
-                />
+                android:layout_height="170sp"
+                android:id="@+id/v_flipper">
+            </ViewFlipper>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/my_button_bg1"
+                    android:layout_weight="1"
+                    android:padding="5sp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:text="On Sale Products"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:textAlignment="center"
+                    android:background="@drawable/my_button_bg"
+                    android:layout_weight="1"
+                    android:padding="5sp"
+                    android:text="View all->"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+  //1st horizontal Scroll View
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginVertical="15sp">
-
-                    <Button
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
-                        android:background="@drawable/apple" />
-
-                    <Button
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
-                        android:background="@drawable/banana" />
-
-                    <Button
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
-                        android:background="@drawable/apple" />
-
-                    <Button
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
-                        android:background="@drawable/grapes" />
-
-                    <Button
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
-                        android:background="@drawable/kiwi" />
-
-                    <Button
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
-                        android:background="@drawable/watermelon" />
-
-                    <Button
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
-                        android:background="@drawable/mango" />
-
-                </LinearLayout>
-
-            </HorizontalScrollView>
-
-            <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#b3ffe600"
-                android:text="On Sale Products"
-                android:layout_marginVertical="10sp"
-                android:textSize="30sp"
-                android:textStyle="" />
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
                 >
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="200sp"
-                android:id="@+id/buttonFruits"
-                android:text="Fruits   N'  "
-                android:layout_alignParentStart="true"
-                android:background="#7111cc00"
-                android:textSize="20sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    //Container view
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#72add6ff"
+                        android:layout_margin="5dp"
+                        android:onClick="showToast1"
+                        android:id="@+id/scrollButton1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10% OFF"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:id="@+id/scrollOff1"
+                            android:background="#e59bfd97"/>
+                    <ImageView
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:background="@drawable/apple" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:text="Apple" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="1 kg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="Rs.100" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add to cart"
+                            android:onClick="showToast2"
+                            android:id="@+id/scrollButton1cart"
+                            android:background="@drawable/my_button_bg"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#72add6ff"
+                        android:layout_margin="5dp"
+                        android:onClick="showToast1"
+                        android:id="@+id/scrollButton2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10% OFF"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:id="@+id/scrollOff2"
+                            android:background="#e59bfd97"/>
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/banana" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:text="Banana" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="1 kg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="Rs.100" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add to cart"
+                            android:onClick="showToast2"
+                            android:id="@+id/scrollButton2cart"
+                            android:background="@drawable/my_button_bg"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#72add6ff"
+                        android:layout_margin="5dp"
+                        android:onClick="showToast1"
+                        android:id="@+id/scrollButton3">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10% OFF"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:id="@+id/scrollOff3"
+                            android:background="#e59bfd97"/>
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/grapes" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:text="Apple" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="1 kg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="Rs.100" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add to cart"
+                            android:onClick="showToast2"
+                            android:id="@+id/scrollButton3cart"
+                            android:background="@drawable/my_button_bg"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#72add6ff"
+                        android:layout_margin="5dp"
+                        android:onClick="showToast1"
+                        android:id="@+id/scrollButton4">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10% OFF"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:id="@+id/scrollOff4"
+                            android:background="#e59bfd97"/>
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/mango" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:text="Mango" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="1 kg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="Rs.100" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add to cart"
+                            android:onClick="showToast2"
+                            android:id="@+id/scrollButton4cart"
+                            android:background="@drawable/my_button_bg"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#72add6ff"
+                        android:layout_margin="5dp"
+                        android:onClick="showToast1"
+                        android:id="@+id/scrollButton5">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10% OFF"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:id="@+id/scrollOff5"
+                            android:background="#e59bfd97"/>
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/kiwi" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:text="Kiwi" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="1 kg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="Rs.100" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add to cart"
+                            android:onClick="showToast2"
+                            android:id="@+id/scrollButton5cart"
+                            android:background="@drawable/my_button_bg"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#72add6ff"
+                        android:layout_margin="5dp"
+                        android:onClick="showToast1"
+                        android:id="@+id/scrollButton6">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10% OFF"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:id="@+id/scrollOff6"
+                            android:background="#e59bfd97"/>
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/watermelon" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:text="Watermelon" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="1 kg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="Rs.100" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add to cart"
+                            android:onClick="showToast2"
+                            android:id="@+id/scrollButton6cart"
+                            android:background="@drawable/my_button_bg"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#72add6ff"
+                        android:layout_margin="5dp"
+                        android:onClick="showToast1"
+                        android:id="@+id/scrollButton7">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10% OFF"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:id="@+id/scrollOff7"
+                            android:background="#e59bfd97"/>
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/banana" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:text="Banana" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="1 kg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="Rs.100" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add to cart"
+                            android:onClick="showToast2"
+                            android:id="@+id/scrollButton7cart"
+                            android:background="@drawable/my_button_bg"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                //1st Horizontal Scroll View end
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/buttonFruits"
                     android:layout_width="wrap_content"
-                    android:layout_height="200sp"
+                    android:layout_height="180sp"
+                    android:layout_weight="1"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/fruitsbutton"
+                    android:text="Fruits   N'  "
+                    android:textSize="20sp" />
+
+                <Button
                     android:id="@+id/buttonVegetables"
-                android:layout_alignParentEnd="true"
-                    android:background="#7111cc00"
-                  android:text="Vegetables"
-                    android:textSize="20sp"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="180sp"
+                    android:layout_weight="1"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/vegetablesbutton"
+                    android:text="Vegetables"
+                    android:textSize="20sp" />
 
 
-            </RelativeLayout>
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/my_button_bg1"
+                    android:layout_weight="1"
+                    android:padding="5sp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:text="Featured Products"
+                    android:textSize="20sp" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:textAlignment="center"
+                    android:background="@drawable/my_button_bg"
+                    android:layout_weight="1"
+                    android:padding="5sp"
+                    android:text="View all->"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            // 2nd horizontal scroll view
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginVertical="15sp">
+                    android:orientation="horizontal">
 
-                    <Button
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
-                        android:background="@drawable/apple" />
+                    //Container view
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#72add6ff"
+                        android:layout_margin="5dp"
+                        android:onClick="showToast1"
+                        android:id="@+id/scrollButton1Second">
 
-                    <Button
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
-                        android:background="@drawable/watermelon" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10% OFF"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:id="@+id/scrollOff1Second"
+                            android:background="#e59bfd97"/>
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/apple" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:text="Apple" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="1 kg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="Rs.100" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add to cart"
+                            android:onClick="showToast2"
+                            android:id="@+id/scrollButton1cartSecond"
+                            android:background="@drawable/my_button_bg"/>
 
-                    <Button
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
-                        android:background="@drawable/banana" />
+                    </LinearLayout>
 
-                    <Button
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
-                        android:background="@drawable/apple" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#72add6ff"
+                        android:layout_margin="5dp"
+                        android:onClick="showToast1"
+                        android:id="@+id/scrollButton2Second">
 
-                    <Button
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
-                        android:background="@drawable/grapes" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10% OFF"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:id="@+id/scrollOff2Second"
+                            android:background="#e59bfd97"/>
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/banana" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:text="Banana" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="1 kg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="Rs.100" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add to cart"
+                            android:onClick="showToast2"
+                            android:id="@+id/scrollButton2cartSecond"
+                            android:background="@drawable/my_button_bg"/>
 
-                    <Button
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
-                        android:background="@drawable/kiwi" />
+                    </LinearLayout>
 
-                    <Button
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
-                        android:background="@drawable/watermelon" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#72add6ff"
+                        android:layout_margin="5dp"
+                        android:onClick="showToast1"
+                        android:id="@+id/scrollButton3Second">
 
-                    <Button
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
-                        android:background="@drawable/mango" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10% OFF"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:id="@+id/scrollOff3Second"
+                            android:background="#e59bfd97"/>
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/grapes" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:text="Apple" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="1 kg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="Rs.100" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add to cart"
+                            android:onClick="showToast2"
+                            android:id="@+id/scrollButton3cartSecond"
+                            android:background="@drawable/my_button_bg"/>
 
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="200sp"
-                        android:background="@drawable/kiwi" />
+                    </LinearLayout>
 
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="200sp"
-                        android:background="@drawable/watermelon" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#72add6ff"
+                        android:layout_margin="5dp"
+                        android:onClick="showToast1"
+                        android:id="@+id/scrollButton4Second">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10% OFF"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:id="@+id/scrollOff4Second"
+                            android:background="#e59bfd97"/>
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/mango" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:text="Mango" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="1 kg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="Rs.100" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add to cart"
+                            android:onClick="showToast2"
+                            android:id="@+id/scrollButton4cartSecond"
+                            android:background="@drawable/my_button_bg"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#72add6ff"
+                        android:layout_margin="5dp"
+                        android:onClick="showToast1"
+                        android:id="@+id/scrollButton5Second">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10% OFF"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:id="@+id/scrollOff5Second"
+                            android:background="#e59bfd97"/>
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/kiwi" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:text="Kiwi" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="1 kg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="Rs.100" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add to cart"
+                            android:onClick="showToast2"
+                            android:id="@+id/scrollButton5cartSecond"
+                            android:background="@drawable/my_button_bg"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#72add6ff"
+                        android:layout_margin="5dp"
+                        android:onClick="showToast1"
+                        android:id="@+id/scrollButton6Second">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10% OFF"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:id="@+id/scrollOff6Second"
+                            android:background="#e59bfd97"/>
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/watermelon" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:text="Watermelon" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="1 kg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="Rs.100" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add to cart"
+                            android:onClick="showToast2"
+                            android:id="@+id/scrollButton6cartSecond"
+                            android:background="@drawable/my_button_bg"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#72add6ff"
+                        android:layout_margin="5dp"
+                        android:onClick="showToast1"
+                        android:id="@+id/scrollButton7Second">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10% OFF"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:id="@+id/scrollOff7Second"
+                            android:background="#e59bfd97"/>
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/banana" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:text="Banana" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="1 kg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="Rs.100" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add to cart"
+                            android:onClick="showToast2"
+                            android:id="@+id/scrollButton7cartSecond"
+                            android:background="@drawable/my_button_bg"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
+                //2nt Horizontal Scroll View end
+
             </HorizontalScrollView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#b3ffe600"
-                android:text="Featured Products"
-                android:layout_marginVertical="10sp"
-                android:textSize="30sp"
-                android:textStyle="" />
 
         </LinearLayout>
 
